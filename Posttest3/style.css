@@ -387,7 +387,7 @@ footer {
         flex-direction: column;
         text-align: center;
         background-color: var(--primary-color);
-        top: 7vh;
+        top: 6vh;
         left: -100%;
         width: 100%;
         z-index: 1;

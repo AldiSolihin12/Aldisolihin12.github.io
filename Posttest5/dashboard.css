@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+}
+
+body {
+    --primary-color: white;
+    --secondary-color: #202020;
+    --alpha-color: rgba(255, 255, 255, 0.815);
+    --text: black;
+}
+
+.dark {
+    filter: invert(100%);
+}
+
+.dark1 { 
+    background-color: #202020;
+    --primary-color: #202020;
+    --secondary-color: white;
+    --alpha-color: rgba(0, 0, 0, 0.719);
+    --text: white;
+}
+
+.webicon {
+    width: 10vw;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw;
+    top: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.navbar ul {
+    background-color: var(--primary-color);
+    list-style: none;
+    gap: 2vw;
+    align-items: center;
+}
+
+.navbar ul li a {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    border-top: 3px solid transparent;
+    padding: 5% 2vw;
+    transition: all 0.35s ease;
+    font-size: 90%;
+}
+
+nav ul li a:hover {
+    border-top: 3px solid #FF4655;
+    transform: translateX(2px);
+}
+
+.menumode{
+    display: flex; 
+    align-items: center; 
+    gap: 2vw; 
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+
+.nightmode{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    appearance: none;
+    outline: none;
+    background-color: #111111;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nightmode:checked{
+    background-color: #FF4655;
+}
+
+.nightmode::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: .5s ease;
+}
+
+.nightmode:checked::before{
+    transform: translateX(30px);
+}
+
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.dash-container {
+    width: 100%;
+    height: auto;
+    background: url(assets/BGgensin.jpg);
+    overflow: auto;
+}
+
+.dash-main {
+    width: auto;
+    margin: 16px;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: var(--alpha-color);
+}
+
+.leading-btn {
+    text-align: end;
+}
+
+.dash-main h1, h2 {
+    color: var(--text);
+}
+
+.dash-main table {
+    width: 100%;
+    border: 3px solid #FF4655;
+    border-collapse: collapse;
+}
+
+.dash-main table thead {
+    background-color: #FF4655;
+}
+
+.dash-main table th, td {
+    color: var(--text);
+    padding: 8px;
+    border: 3px solid #FF4655;
+}
+
+.dash-main table th{
+    color: white !important;
+}
+
+tbody tr td img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+}
+
+.textfield {
+    width: auto;
+    margin-block: 8px;
+    padding: 12px;
+    border: 1px solid #ABABAB;
+    border-radius: 4px;
+}
+
+.textfield:focus {
+    border: 1px solid transparent;
+    outline: 1.5px solid #FF4655;
+}
+
+.action {
+    text-align: center;
+}
+
+.add-btn {
+    background-color: #FF4655;
+    padding: 8px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    font-weight: 500;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #FF4655;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.delete-btn {
+    background-color: #606060;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.add-btn:hover {
+    color: #FF4655;
+    background-color: transparent;
+    border: 3px solid #FF4655;
+}
+
+.inputgambar{
+    margin-top: 1vh;
+    max-width: 300px;
+    border: 2px solid #FF4655;
+    border-radius: 50px;
+    padding: 2px;
+    margin-bottom: 3vh;
+}
+
+.inputgambar::-webkit-file-upload-button{
+    color: var(--primary-color);
+    background-color: #FF4655;
+    border-radius: 50px;
+    padding: 4px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    filter: brightness(90%);
+}
+
+.delete-btn:hover {
+    filter: brightness(90%);
+}
+
+.history-btn:hover {
+    filter: brightness(90%);
+}
+
+
+.add-data {
+    height: 100vh;
+    /* background-color: #FF4655; */
+    background: url(assets/BGgensin.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-form-container {
+    width: 40vw;
+    height: auto;
+    background-color: white;
+    padding: 64px;
+    border-radius: 32px;
+}
+
+.add-form-container h1 {
+    text-align: center;
+}
+
+.add-form-container hr {
+    border: 2px solid #FF4655;
+    margin-bottom: 24px;
+}
+
+.add-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 640px) {
+    nav {
+        padding:  16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .nav-items {
+        display: none
+    }
+
+    .portal-btn {
+        display: none;
+    }
+
+
+
+    #burgerbar {
+        display: block;
+        width: 36px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #show {
+        display: block;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #nav-items {
+        display: none;
+        flex-direction: column;
+    }
+
+    #nav-items a{
+        text-align: center;
+    }
+
+    #portal-btn{
+        display: none;
+        width: 100%;
+    }
+
+    #portal-btn button{
+        width: 100%;
+    }
+
+    #portal-btn button:hover{
+        scale: 100%;
+    }
+
+
+
+    .hero-title {
+        margin-inline: 48px;
+    }
+
+    .hero-title h1 {
+        font-size: 36px;
+    }
+
+    .hero-title hr {
+        margin: auto;
+        width: 240px;
+    }
+
+    .hero-title p {
+        font-size: 20px;
+    }
+
+
+
+    .news {
+        height: auto;
+        margin-block: 64px;
+    }
+
+    .news-title {
+        flex-basis: 10%;
+    }
+
+    .news-container {
+        flex-basis: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-inline: 32px;
+    }
+
+    .news-btn-container {
+        flex-basis: 5%;
+    }
+
+    .news-btn-container button {
+        margin: 32px;
+    }
+
+    footer p {
+        padding-inline: 64px;
+    }
+}

@@ -337,9 +337,9 @@ nav ul li a:hover {
     width: calc(28% - 20px);
     height: auto;
     margin: 10px;
-    background-color: white;
+    background-color: var(--text);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    color: black;
+    color: var(--primary-color);
     border: 4px solid transparent;
     transition: .5s ease;
 }
@@ -643,7 +643,7 @@ footer {
 
     .card {
         width: calc(50% - 20px);
-        height: 23vh;
+        height: 24vh;
     }
 
     .card img {
